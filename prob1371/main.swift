@@ -21,11 +21,18 @@ for temp in line {
 }
 
 let sortedAns = Array(ans).sorted(by: {$0.value > $1.value} )
-
+var result = [Character]()
 for temp in sortedAns {
     if(temp.value < sortedAns.first!.value){
         break
     } else {
-        print(temp.key)
+        result.insert(temp.key, at: result.endIndex)
     }
 }
+
+result.sort()
+
+for temp in result {
+    print(temp, terminator:"")
+}
+print()
