@@ -8,9 +8,21 @@
 
 import Foundation
 
-let testcase: Int = readLine()!
+let testcase: String = readLine()!
+let t: Int = Int(testcase)!
 
-for 0...<testcase {
-    var numbers = readLine()?.components(separatedBy: " ")
-    
+for _ in 0..<t {
+    let numbers = readLine()?.components(separatedBy: " ")
+    var sum: Int = 0
+    var min: Int = 100
+    for temp in numbers! {
+        let num: Int = Int(temp)!
+        if(num % 2 == 0){
+            sum += num
+            if(num < min){
+                min = num
+            }
+        }
+    }
+    print("\(sum) \(min)")
 }
