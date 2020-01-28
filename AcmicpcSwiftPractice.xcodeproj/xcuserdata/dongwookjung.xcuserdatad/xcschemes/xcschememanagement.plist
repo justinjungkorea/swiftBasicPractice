@@ -44,6 +44,16 @@
 			<key>orderHint</key>
 			<integer>4</integer>
 		</dict>
+		<key>prob2438.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>10</integer>
+		</dict>
+		<key>prob2439.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>11</integer>
+		</dict>
 		<key>prob2857.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -55,6 +65,11 @@
 			<integer>6</integer>
 		</dict>
 		<key>prob3058.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>prob3059.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>9</integer>
