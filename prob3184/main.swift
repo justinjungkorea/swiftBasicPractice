@@ -14,7 +14,7 @@ let r = Int(rc[0])
 let c = Int(rc[1])
 var map = [String]()
 var yard: [[Int]] = Array(repeating: Array(repeating: 0, count: c!), count: r!)
-var visted: [[Bool]] = Array(repeating: Array(repeating: false, count: c!), count: r!)
+var visited: [[Bool]] = Array(repeating: Array(repeating: false, count: c!), count: r!)
 
 
 
@@ -37,9 +37,11 @@ for i in 0..<r! {
 
 for i in 0..<r! {
     for j in 0..<c! {
-        if(visted[i][j]){
+        if(visited[i][j] || yard[i][j] != 2 ){
             continue
-        }
+        }
+        
+        visited[i][j] = true
         
         
     }
