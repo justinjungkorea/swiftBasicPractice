@@ -16,6 +16,32 @@ var map = [String]()
 var yard: [[Int]] = Array(repeating: Array(repeating: 0, count: c!), count: r!)
 var visited: [[Bool]] = Array(repeating: Array(repeating: false, count: c!), count: r!)
 
+class Queue<T> {
+    private var array: [T]
+    
+    public init(){
+        array = []
+    }
+    
+    public var isEmpty: Bool {
+        return array.isEmpty
+    }
+    
+    public func enqueue(data: T){
+        array.append(data)
+    }
+    
+    public func dequeue(){
+        if isEmpty {
+            return nil
+        } else {
+            return array.removeFirst()
+        }
+    }
+    
+}
+
+
 
 
 for i in 0..<r! {
@@ -46,3 +72,4 @@ for i in 0..<r! {
         
     }
 }
+
