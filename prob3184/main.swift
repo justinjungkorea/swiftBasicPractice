@@ -83,7 +83,7 @@ func bfs(x: Int, y: Int) {
             let nx = curX + dx[i]
             let ny = curY + dy[i]
             
-            if( (0 <= nx) && (nx <= r!) && (0 <= ny) && (ny <= c!) && (visited[nx][ny] == 0) && (yard[x][y] != 2) ){
+            if( (0 <= nx) && (nx < r!) && (0 <= ny) && (ny < c!) && (visited[nx][ny] == 0) && (yard[x][y] != 2) ){
                 visited[nx][ny] = 1
                 if(yard[nx][ny] == 3){
                     nSheep += 1
@@ -127,11 +127,12 @@ for i in 0..<r! {
 for i in 0..<r! {
     for j in 0..<c! {
         if( ((yard[i][j] == 2) || (yard[i][j] == 3)) && (visited[i][j] == 0) ){
-            bfs(i, j)
+            bfs(x: i, y: j)
         }
     }
 }
 
+print("\(sheep) \(wolf)")
 
 
 
