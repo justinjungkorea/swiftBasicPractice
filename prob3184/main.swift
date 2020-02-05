@@ -21,7 +21,6 @@ var visited: [[Int]] = Array(repeating: Array(repeating: 0, count: c!), count: r
 var wolf: Int = 0
 var sheep: Int = 0
 
-
 struct Potato {
     var x = 0
     var y = 0
@@ -56,6 +55,7 @@ class Queue<T> {
     }
 }
 
+//execution bfs algorithm from x,y
 func bfs(x: Int, y: Int) {
     var nSheep: Int = 0
     var nWoolf: Int = 0
@@ -83,7 +83,7 @@ func bfs(x: Int, y: Int) {
             let nx = curX + dx[i]
             let ny = curY + dy[i]
             
-            if( (0 <= nx) && (nx < r!) && (0 <= ny) && (ny < c!) && (visited[nx][ny] == 0) && (yard[x][y] != 2) ){
+            if( (0 <= nx) && (nx < r!) && (0 <= ny) && (ny < c!) && (visited[nx][ny] == 0) && (yard[nx][ny] != 1) ){
                 visited[nx][ny] = 1
                 if(yard[nx][ny] == 3){
                     nSheep += 1
@@ -105,6 +105,7 @@ func bfs(x: Int, y: Int) {
     
 }
 
+//input data
 for i in 0..<r! {
     let mapLine: String = readLine()!
     map.insert(mapLine, at: Int(i))
