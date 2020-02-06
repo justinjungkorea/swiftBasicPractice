@@ -8,15 +8,23 @@
 
 import Foundation
 
-//var num1 = "10001"
-//var num2 = Int(num1, radix: 2)!
-
 var tStr: String = readLine()!
 var t: Int = Int(tStr)!
 var ans = [Int]()
 
 for i in 0..<t {
-    var num1: String = readLine()!
-    var num2: String = readLine()!
+    let num1: String = readLine()!
+    let num2: String = readLine()!
+    var cnt = 0
+    for j in 0..<num1.count {
+        let index = num1.index(num1.startIndex, offsetBy: j)
+        if num1[index] != num2[index] {
+            cnt += 1
+        }
+    }
+    ans.insert(cnt, at: i)
 }
 
+for i in ans {
+    print("Hamming distance is \(i).")
+}
