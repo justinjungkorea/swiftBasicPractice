@@ -8,6 +8,16 @@
 
 import Foundation
 
-func combination(){
+var checkSet = Set<Int>()
+
+func combination(M: Int, N: Int) {
+    var ans = 0
+}
+
+let line: String = readLine()!
+let nm = line.components(separatedBy: " ")
+for i in 0..<nm[1] {
+    let temp: String = readLine()!
+    let tempNum = temp.components(separatedBy: " ")
     
 }
